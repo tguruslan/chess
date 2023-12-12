@@ -1,0 +1,150 @@
+<html>
+
+  <head>
+    <title>Шахи</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  </head>
+
+  <body>
+
+    <div>
+        <table class="board">
+        <tbody>
+            <tr>
+            <td><i class="fa-solid fa-chess-rook   black"></i></td>
+            <td><i class="fa-solid fa-chess-knight black"></i></td>
+            <td><i class="fa-solid fa-chess-bishop black"></i></td>
+            <td><i class="fa-solid fa-chess-queen  black"></i></td>
+            <td><i class="fa-solid fa-chess-king   black"></i></td>
+            <td><i class="fa-solid fa-chess-bishop black"></i></td>
+            <td><i class="fa-solid fa-chess-knight black"></i></td>
+            <td><i class="fa-solid fa-chess-rook   black"></i></td>
+            </tr>
+            <tr>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            <td><i class="fa-solid fa-chess-pawn black"></i></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            <td><i class="fa-solid fa-chess-pawn white"></i></td>
+            </tr>
+            <tr>
+            <td><i class="fa-solid fa-chess-rook   white"></i></td>
+            <td><i class="fa-solid fa-chess-knight white"></i></td>
+            <td><i class="fa-solid fa-chess-bishop white"></i></td>
+            <td><i class="fa-solid fa-chess-queen  white"></i></td>
+            <td><i class="fa-solid fa-chess-king   white"></i></td>
+            <td><i class="fa-solid fa-chess-bishop white"></i></td>
+            <td><i class="fa-solid fa-chess-knight white"></i></td>
+            <td><i class="fa-solid fa-chess-rook   white"></i></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table class="summary white">
+            <tbody>
+                <tr>
+                    <td><i class="fa-solid fa-chess-pawn   white" max="8"></i></td>
+                    <td><i class="fa-solid fa-chess-rook   white" max="2"></i></td>
+                    <td><i class="fa-solid fa-chess-knight white" max="2"></i></td>
+                    <td><i class="fa-solid fa-chess-bishop white" max="2"></i></td>
+                    <td><i class="fa-solid fa-chess-queen  white" max="1"></i></td>
+                    <td><i class="fa-solid fa-chess-king   white" max="1"></i></td>
+                    <td rowspan="2" class="hourglass"><i class="fa-solid fa-hourglass-start"></i></td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="summary black move">
+            <tbody>
+                <tr>
+                    <td><i class="fa-solid fa-chess-pawn   black" max="8"></i></td>
+                    <td><i class="fa-solid fa-chess-rook   black" max="2"></i></td>
+                    <td><i class="fa-solid fa-chess-knight black" max="2"></i></td>
+                    <td><i class="fa-solid fa-chess-bishop black" max="2"></i></td>
+                    <td><i class="fa-solid fa-chess-queen  black" max="1"></i></td>
+                    <td><i class="fa-solid fa-chess-king   black" max="1"></i></td>
+                    <td rowspan="2" class="hourglass"><i class="fa-solid fa-hourglass-start"></i></td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+  </body>
+
+</html>
